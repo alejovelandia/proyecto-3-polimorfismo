@@ -3,12 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pojos;
+package com.linea3.polimorfismo;
 
 /**
  *
- * @author alejandro
+ * @author ferch
  */
-public class Jet {
+public class Carro extends VehiculoMotor{
     
+    public void carroInfo(){
+         System.out.println("clase Carro"); 
+    }
 }
