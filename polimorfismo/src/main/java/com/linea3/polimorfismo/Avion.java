@@ -11,8 +11,23 @@ package com.linea3.polimorfismo;
  */
 public class Avion extends VehiculoMotor{
     
+    private double modeloMotor;
+
+    public Avion(double modeloMotor, String tipoCombustible, String marca, String modelo) {
+        super(tipoCombustible, marca, modelo);
+        this.modeloMotor = modeloMotor;
+    }
+    
     public void avionInfo(){
          System.out.println("clase Avion"); 
+    }
+
+    public double getModeloMotor() {
+        return modeloMotor;
+    }
+
+    public void setModeloMotor(double modeloMotor) {
+        this.modeloMotor = modeloMotor;
     }
     
 }

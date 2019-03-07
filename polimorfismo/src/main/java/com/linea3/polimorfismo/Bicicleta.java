@@ -11,8 +11,23 @@ package com.linea3.polimorfismo;
  */
 public class Bicicleta extends Vehiculo{
     
+    private int conteoEngranaje;
+
+    public Bicicleta(int conteoEngranaje, String marca, String modelo) {
+        super(marca, modelo);
+        this.conteoEngranaje = conteoEngranaje;
+    }
+    
     public void bicicletaInfo(){
          System.out.println("clase Bicicleta"); 
+    }
+
+    public int getConteoEngranaje() {
+        return conteoEngranaje;
+    }
+
+    public void setConteoEngranaje(int conteoEngranaje) {
+        this.conteoEngranaje = conteoEngranaje;
     }
     
 }

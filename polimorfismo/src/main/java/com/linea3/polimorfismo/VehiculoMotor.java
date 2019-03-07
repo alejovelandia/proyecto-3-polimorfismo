@@ -9,7 +9,14 @@ package com.linea3.polimorfismo;
  *
  * @author ferch
  */
-public class VehiculoMotor extends Vehiculo{
+public abstract class VehiculoMotor extends Vehiculo{
+    
+    private String tipoCombustible;
+
+    public VehiculoMotor(String tipoCombustible, String marca, String modelo) {
+        super(marca, modelo);
+        this.tipoCombustible = tipoCombustible;
+    }
     
     @Override
     public void imprimirInfo(){
@@ -19,4 +26,13 @@ public class VehiculoMotor extends Vehiculo{
     public void motorInfo(){
          System.out.println("clase vehiculoMotor Propia"); 
     }
+
+    public String getTipoCombustible() {
+        return tipoCombustible;
+    }
+
+    public void setTipoCombustible(String tipoCombustible) {
+        this.tipoCombustible = tipoCombustible;
+    }
+    
 }

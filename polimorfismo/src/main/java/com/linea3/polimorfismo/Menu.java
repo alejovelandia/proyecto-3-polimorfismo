@@ -17,27 +17,29 @@ public class Menu {
     public void Imprimir() {
 
         List<Vehiculo> listaVehiculo = new ArrayList<>();
-        List<VehiculoMotor> listaVehiculoMotor= new ArrayList<>();
+       
+        Vehiculo v1 = new Patineta(50,"cgk","prior");
+        Vehiculo v2 = new Patineta(65,"fly","element");
         
-        Vehiculo v1 = new Patineta();
-        Vehiculo v2 = new VehiculoMotor();
-        Vehiculo v3 = new Avion();
-        Vehiculo v4 = new Carro();
-        Vehiculo v5 = new Bicicleta();
+        Vehiculo v3 = new Avion((double)3.2,"diesel","boing","737");
+        Vehiculo v4 = new Avion((double)6.3,"diesel","airbus","87");
+        
+        Vehiculo v5 = new Carro((double)5.3,"gasolina","ford","ranger");
+        Vehiculo v6 = new Carro((double)2.4,"gasolina","coupe","basic");
+        
+        Vehiculo v7 = new Bicicleta(17,"GW","advance");
+        Vehiculo v8 = new Bicicleta(8,"rhino","z");
 
         listaVehiculo.add(v1);
         listaVehiculo.add(v2);
         listaVehiculo.add(v3);
         listaVehiculo.add(v4);
         listaVehiculo.add(v5);
+        listaVehiculo.add(v6);
+        listaVehiculo.add(v7);
+        listaVehiculo.add(v8);
         
-        VehiculoMotor v6=new Carro();
-        VehiculoMotor v7=new Avion();
-        
-        listaVehiculoMotor.add(v6);
-        listaVehiculoMotor.add(v7);
-        
-
+     
         for (Vehiculo vehiculo : listaVehiculo) {
 
             System.out.println("-----------------------------------");
@@ -47,10 +49,6 @@ public class Menu {
             }
             if (vehiculo instanceof Patineta) {
                 ((Patineta) vehiculo).patinetaInfo();
-                vehiculo.imprimirInfo();
-            }
-            if (vehiculo instanceof VehiculoMotor) {
-                ((VehiculoMotor) vehiculo).motorInfo();
                 vehiculo.imprimirInfo();
             }
             if (vehiculo instanceof Carro) {
@@ -63,20 +61,6 @@ public class Menu {
             }
 
         }
-        
-        for (VehiculoMotor vehiculoMotor : listaVehiculoMotor) {
-
-            System.out.println("-----------------------------------");
-            if (vehiculoMotor instanceof Carro) {
-               ((Carro) vehiculoMotor).carroInfo();
-                vehiculoMotor.imprimirInfo();
-            }
-            
-            if (vehiculoMotor instanceof Avion) {
-                ((Avion) vehiculoMotor).avionInfo();
-                vehiculoMotor.imprimirInfo();
-            }
-        }
-        
+          
     }
 }

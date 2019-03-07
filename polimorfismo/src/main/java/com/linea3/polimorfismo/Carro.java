@@ -11,7 +11,23 @@ package com.linea3.polimorfismo;
  */
 public class Carro extends VehiculoMotor{
     
+    private double tamañoMotor;
+
+    public Carro(double tamañoMotor, String tipoCombustible, String marca, String modelo) {
+        super(tipoCombustible, marca, modelo);
+        this.tamañoMotor = tamañoMotor;
+    }
+    
     public void carroInfo(){
          System.out.println("clase Carro"); 
     }
+
+    public double getTamañoMotor() {
+        return tamañoMotor;
+    }
+
+    public void setTamañoMotor(double tamañoMotor) {
+        this.tamañoMotor = tamañoMotor;
+    }
+   
 }
